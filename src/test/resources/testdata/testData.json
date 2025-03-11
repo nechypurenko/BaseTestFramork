@@ -1,0 +1,12 @@
+[
+  {
+    "category": "DevOps",
+    "subCategory": "Unix",
+    "expectedTitle": "Linux/Unix Tutorial"
+  },
+  {
+    "category": "DevOps",
+    "subCategory": "Docker",
+    "expectedTitle": "Docker Tutorial"
+  }
+]
