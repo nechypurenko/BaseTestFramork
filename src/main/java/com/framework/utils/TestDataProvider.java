@@ -1,6 +1,5 @@
-package com.utils;
+package com.framework.utils;
 
-import com.framework.utils.TestDataUtil;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
