@@ -4,7 +4,7 @@ import static com.framework.actions.Action.*;
 
 public class UnixPage {
 
-    public boolean getPageTitle(String title) {
+    public boolean findPageTitle(String title) {
         return findHeadingByText(title);
     }
 }

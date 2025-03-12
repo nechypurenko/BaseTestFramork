@@ -17,9 +17,9 @@ public class Action {
         SelenideElement element = parent.$x(xpath);
         if (element.exists()) {
             element.scrollTo().shouldBe(Condition.enabled).click();
-            System.out.println("Clicked on element with text: " + name);
+            System.out.printf("Clicked on element with text: %s", name);
         } else {
-            System.out.println("Element with text '" + name + "' not found within parent.");
+            System.out.printf("Element with text %s not found within parent.", name);
         }
     }
 
@@ -33,26 +33,25 @@ public class Action {
                         .shouldBe(Condition.enabled)
                         .scrollTo()
                         .click();
-                System.out.println("Clicked on element: " + name);
+                System.out.printf("Clicked on element: %s", name);
                 isClicked = true;
                 break;
             }
         }
         if (!isClicked) {
-            System.out.println("Element '" + name + "' not found.");
+            System.out.printf("Element %s not found.", name);
         }
     }
 
     public static boolean findHeadingByText(String text) {
         SelenideElement heading = $$("h1, h2, h3, h4, h5, h6")
-                .findBy(text(text.toLowerCase(Locale.ROOT)));
+                .findBy(Condition.text(text));
 
-        if (heading.exists()) {
-            System.out.println("Found heading: <" + heading.getTagName() + "> with text: " + text);
-            return true;
-        } else {
-            System.out.println("Heading with text '" + text + "' not found.");
+        if (!heading.exists()) {
+            System.out.printf("Heading with text '%s' not found.%n", text);
             return false;
         }
+        System.out.printf("Found heading: <%s> with text: %s%n", heading.getTagName(), heading.getText());
+        return true;
     }
 }

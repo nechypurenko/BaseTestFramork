@@ -18,8 +18,8 @@ public class UnixNavigationTest extends BaseTest{
         homePage.openPage(BASE_URL);
         homePage.selectCategory(categoryName.toLowerCase());
         homePage.selectSubCategory(subCategoryName.toLowerCase());
-        boolean isTitleExists = unixPage.getPageTitle(expectedTitle.toLowerCase());
-        System.out.println("Title" + isTitleExists);
+        boolean isTitleExists = unixPage.findPageTitle(expectedTitle.toLowerCase());
+        System.out.println("Title present: " + isTitleExists);
         assertTrue(isTitleExists, "Page title should be " + expectedTitle);
     }
 }
