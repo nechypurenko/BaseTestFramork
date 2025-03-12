@@ -1,4 +1,8 @@
 package com.framework.pages;
 
-public class BasePage {
-}
+import static com.codeborne.selenide.Selenide.open;
+
+abstract public class BasePage {
+    public void openPage(String url) {
+        open(url);
+    }}

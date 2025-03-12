@@ -1,4 +1,4 @@
-package com.framework.utils;
+package com.framework.actions;
 
 import java.util.Locale;
 import com.codeborne.selenide.Condition;
