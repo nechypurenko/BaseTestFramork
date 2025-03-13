@@ -13,6 +13,5 @@ abstract public class DriverManager {
         Configuration.browserCapabilities = new ChromeOptions()
                 .addArguments("--disable-gpu", "--disable-extensions", "--disable-popup-blocking");
 
-
     }
 }
