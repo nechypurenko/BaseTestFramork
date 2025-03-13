@@ -1,8 +1,6 @@
 package com.framework.driver;
 
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
-//import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 abstract public class DriverManager {
